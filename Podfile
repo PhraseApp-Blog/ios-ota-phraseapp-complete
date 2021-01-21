@@ -6,5 +6,5 @@ target 'phraseapp-demo' do
   use_frameworks!
 
   # Pods for phraseapp-demo
-  pod 'PhraseApp'
+  pod 'PhraseSDK'
 end

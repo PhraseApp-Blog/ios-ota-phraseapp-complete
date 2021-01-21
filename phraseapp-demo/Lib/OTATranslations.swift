@@ -6,14 +6,14 @@
 //  Copyright © 2019 Mohammad Ashour. All rights reserved.
 //
 
-import PhraseApp
+import PhraseSDK
 
 class OTATranslations {
     static let shared = OTATranslations()
     
     private init() {
         #if DEBUG
-        PhraseApp.shared.debugMode = true
+        Phrase.shared.debugMode = true
         #endif
         
         let config: PList? = loadConfig()
@@ -25,9 +25,9 @@ class OTATranslations {
             let environmentTokenKey: String = "prodToken"
             #endif
             
-            PhraseApp.shared.setup(
+            Phrase.shared.setup(
                 distributionID: config.getValue(withKey: "distributionID"),
-                environmentToken: config.getValue(withKey: environmentTokenKey),
+                environmentSecret: config.getValue(withKey: environmentTokenKey),
                 timeout: config.getValue(withKey: "timeout")
             )
         }
@@ -35,7 +35,7 @@ class OTATranslations {
     
     func updateTranslations(onUpdateComplete: (() -> Void)? = nil) {
         do {
-            try PhraseApp.shared.updateTranslations { result in
+            try Phrase.shared.updateTranslations { result in
                 switch result {
                     
                 case .success(let updated):

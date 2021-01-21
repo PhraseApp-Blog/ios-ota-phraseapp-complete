@@ -1,16 +1,16 @@
 PODS:
-  - PhraseApp (1.1.2)
+  - PhraseSDK (2.3.1)
 
 DEPENDENCIES:
-  - PhraseApp
+  - PhraseSDK
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - PhraseApp
+  trunk:
+    - PhraseSDK
 
 SPEC CHECKSUMS:
-  PhraseApp: c866405ddbc03a66b94a7a177f89bddad2316121
+  PhraseSDK: a528ac8fa049aa88804e7b8258a7bdfab6532ad3
 
-PODFILE CHECKSUM: 074b987ab72f724fb1797c928a549f4f4b570e5b
+PODFILE CHECKSUM: ffdf731940f5831a982517012f18a0530dea1088
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.10.1
